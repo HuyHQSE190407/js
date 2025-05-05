@@ -9,10 +9,20 @@
   </head>
   <body>
     <div class="math">
-      <input type="text" id="num1" value="0" onchange="onNum1Changed()"/>
-      <input type="text" id="num2" value="0" onchange="onNum2Changed()"/>
-        <button type="button" onclick="myFunction()">add</button>
-      <div class="result">0</div>
+      <input type="text" id="num1" value="0" onmouseout="onChangedResult()"/>
+      <input type="text" id="num2" value="0" onmouseout="onChangedResult()"/>
+       <div id="result">0</div>
     </div>
+    <div class="date_time">
+      <button type="button" id="date" onclick="showDate()">Show Date</button>
+    </div>
+    <p id="demo"></p>
+    <button type="button" onclick="stringTest()">String Test</button>
+    <button type="button" onclick="replacedString()">replaced</button>
+    <button type="button" onclick="numberMethods()">number methods</button>
+    <button type="button" onclick="accessArray()">access array</button>
+    <button type="button" onclick="accessArray2()">access array 2</button>
+    <button type="button" onclick="clarifyArray_object()">clarify array</button>
+    <button type="button" onclick="join_array()">join array</button>
   </body>
 </html>
