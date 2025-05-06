@@ -94,3 +94,17 @@ function join_array() {
   alert("length of array: " + fruits.length);
   alert("element of array: " + fruits);
 }
+
+function deletedArray() {
+  let arrayList = new Array();
+  let num = prompt("Enter the number of elements you want to add in array:");
+  for (let i = 0; i < num; i++) {
+    let element = prompt("Enter the element you want to add in array:");
+    arrayList.push(element);
+  }
+
+  for(let i in arrayList) {
+    alert(`sum is: ${arrayList[i]} ${i}`);
+  }
+
+}
