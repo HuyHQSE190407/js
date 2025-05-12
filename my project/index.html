@@ -21,6 +21,8 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="responsive.css">
     <title>My project</title>
   </head>
   <body>
@@ -28,11 +30,7 @@
       <div class="container">
         <div class="header-top">
           <!-- logo -->
-          <img
-            src="./my_icon/Group 105.png"
-            alt="shine smile"
-            class="logo"
-          />
+          <img src="./my_icon/Group 105.png" alt="shine smile" />
           <!-- navigation -->
           <nav class="navbar">
             <ul class="navbar__list">
@@ -40,7 +38,9 @@
                 <a href="#!" class="navbar__link navbar__link--active">Home</a>
               </li>
               <li class="navbar_item">
-                <a href="#!" class="navbar__link">Service</a>
+                <a href="/my project/testDataList.html" class="navbar__link"
+                  >Service</a
+                >
               </li>
               <li class="navbar_item">
                 <a href="#!" class="navbar__link">About</a>
@@ -75,7 +75,7 @@
             <figure class="hero__image">
               <img
                 src="./my_imgae/hero1.jpg"
-                alt="dentist is helping"
+                alt="dentist is  helping"
                 class="hero_img hero__img-large"
               />
               <img
@@ -93,62 +93,79 @@
     <main>
       <!-- service -->
       <section class="service">
-        <div class="container">
-          <h2 class="service__heading section-heading">Our services</h2>
-          <p class="service__desc section-desc">
-            Exceptional dental care for all ages. Your great smile begins with a
-            great dentist.
-          </p>
-          <div class="service__row">
-            <!-- service left -->
-            <figure>
-              <img src="./my_imgae/hero2.jpg" alt="" class="service__img" />
-            </figure>
+        <div data-aos="fade-down">
+          <div class="container">
+            <h2 class="service__heading section-heading">Our services</h2>
+            <p class="service__desc section-desc">
+              Exceptional dental care for all ages. Your great smile begins with
+              a great dentist.
+            </p>
+            <div class="service__row">
+              <!-- service left -->
+              <figure>
+                <img
+                  src="./my_imgae/hero2.jpg"
+                  alt=""
+                  data-aos="fade-right"
+                  class="service__img"
+                />
+              </figure>
 
-            <!-- service right -->
-            <div class="service__list">
-              <!-- item 1 -->
-              <section class="service__item">
-                <div class="service-item__icon">
-                  <i class="bx bxs-shield-plus bx-lg"></i>
+              <!-- service right -->
+              <div data-aos="fade-left">
+                <div class="service__list">
+                  <!-- item 1 -->
+                  <section class="service__item">
+                    <div data-aos="fade-right">
+                      <div class="service-item__icon">
+                        <i class="bx bxs-shield-plus bx-lg"></i>
+                      </div>
+                      <div class="service-item__body">
+                        <div class="service-item__heading">Oral Surgery</div>
+                        <div class="service-item__desc">
+                          Everything you expect and then some. Cleanings,
+                          fillings, and x-rays.
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- item 2 -->
+                  <section class="service__item">
+                    <div data-aos="fade-up">
+                      <div class="service-item__icon">
+                        <i class="bx bxs-shield-plus bx-lg"></i>
+                      </div>
+                      <div class="service-item__body">
+                        <div class="service-item__heading">
+                          Wisdom Teeth Removal
+                        </div>
+                        <div class="service-item__desc">
+                          Everything you expect and then some. Cleanings,
+                          fillings, and x-rays.
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- item 3 -->
+                  <section class="service__item">
+                    <div data-aos="fade-left">
+                      <div class="service-item__icon">
+                        <i class="bx bxs-shield-plus bx-lg"></i>
+                      </div>
+                      <div class="service-item__body">
+                        <div class="service-item__heading">
+                          Preventative Dentistry
+                        </div>
+                        <div class="service-item__desc">
+                          Everything you expect and then some. Cleanings,
+                          fillings, and x-rays.
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <a href="#!" class="btn service__btn">All service</a>
                 </div>
-                <div class="service-item__body">
-                  <div class="service-item__heading">Oral Surgery</div>
-                  <div class="service-item__desc">
-                    Everything you expect and then some. Cleanings, fillings,
-                    and x-rays.
-                  </div>
-                </div>
-              </section>
-              <!-- item 2 -->
-              <section class="service__item">
-                <div class="service-item__icon">
-                  <i class="bx bxs-shield-plus bx-lg"></i>
-                </div>
-                <div class="service-item__body">
-                  <div class="service-item__heading">Wisdom Teeth Removal</div>
-                  <div class="service-item__desc">
-                    Everything you expect and then some. Cleanings, fillings,
-                    and x-rays.
-                  </div>
-                </div>
-              </section>
-              <!-- item 3 -->
-              <section class="service__item">
-                <div class="service-item__icon">
-                  <i class="bx bxs-shield-plus bx-lg"></i>
-                </div>
-                <div class="service-item__body">
-                  <div class="service-item__heading">
-                    Preventative Dentistry
-                  </div>
-                  <div class="service-item__desc">
-                    Everything you expect and then some. Cleanings, fillings,
-                    and x-rays.
-                  </div>
-                </div>
-              </section>
-              <a href="#!" class="btn service__btn">All service</a>
+              </div>
             </div>
           </div>
         </div>
@@ -487,17 +504,22 @@
                   placeholder="Enter your email..."
                   class="custom-placeholder"
                 />
-                <button type="submit" class="btn-last">
-                  Subscribe
-                </button>
+                <button type="submit" class="btn-last">Subscribe</button>
               </form>
             </div>
           </div>
-          <hr>  
-          <p class="content-1 custom">2021 GDN. Copyright and All rights reserved.</p>
+          <hr />
+          <p class="content-1 custom">
+            2021 GDN. Copyright and All rights reserved.
+          </p>
         </div>
       </footer>
     </main>
     <!-- done -->
+    <script src="accessGeneration.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
